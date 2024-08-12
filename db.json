@@ -1,0 +1,39 @@
+{
+  "api/v1/applications/testapp/pipelineConfigs/"[
+  {
+    "id": "wait",
+    "pipelines": [
+        {
+            "appConfig": {},
+            "keepWaitingPipelines": false,
+            "lastModifiedBy": "ritek.rounak@harness.io",
+            "limitConcurrent": true,
+            "schema": "1",
+            "spelEvaluator": "v4",
+            "name": "Wait Stage",
+            "id": "waitstage",
+            "stages": [
+                {
+                    "isNew": true,
+                    "name": "Wait_1",
+                    "refId": "1",
+                    "requisiteStageRefIds": [],
+                    "type": "wait",
+                    "waitTime": 10
+                },
+                {
+                    "isNew": true,
+                    "name": "Wait_2",
+                    "refId": "2",
+                    "requisiteStageRefIds": [
+                        "1"
+                    ],
+                    "type": "wait",
+                    "waitTime": 30
+                }
+            ],
+            "triggers": []
+        }
+    ]
+  }]
+}
